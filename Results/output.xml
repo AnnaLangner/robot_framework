@@ -1,164 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.3 on darwin)" generated="2025-05-15T12:45:26.331783" rpa="false" schemaversion="5">
-<suite id="s1" name="Crm" source="/Users/annalangner/Documents/workspace/robot/Tests/Crm.robot">
+<robot generator="Robot 7.2.2 (Python 3.13.3 on darwin)" generated="2025-05-20T11:49:38.191645" rpa="false" schemaversion="5">
+<suite id="s1" name="CRM tests" source="/Users/annalangner/Documents/workspace/robot/Tests/Crm.robot">
 <test id="s1-t1" name="Should be able to add new customer" line="12">
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>.2s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-05-15T12:45:26.492447" elapsed="0.000264"/>
+<status status="PASS" start="2025-05-20T11:49:38.335106" elapsed="0.000238"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2025-05-15T12:45:26.493306" elapsed="0.000197"/>
+<status status="PASS" start="2025-05-20T11:49:38.335871" elapsed="0.000183"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-05-15T12:45:26.493743" level="INFO">Starting the test case</msg>
+<msg time="2025-05-20T11:49:38.336277" level="INFO">Starting the test case</msg>
 <arg>Starting the test case</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-05-15T12:45:26.493644" elapsed="0.000145"/>
+<status status="PASS" start="2025-05-20T11:49:38.336183" elapsed="0.000139"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-05-15T12:45:26.494039" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm'.</msg>
-<msg time="2025-05-15T12:45:26.970903" level="WARN">The chromedriver version (135.0.7049.42) detected in PATH at /Users/annalangner/Documents/workspace/selenium/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.94 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-05-20T11:49:38.336559" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm'.</msg>
+<msg time="2025-05-20T11:49:38.799736" level="WARN">The chromedriver version (135.0.7049.42) detected in PATH at /Users/annalangner/Documents/workspace/selenium/chromedriver might not be compatible with the detected chrome version (136.0.7103.114); currently, chromedriver 136.0.7103.94 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>https://automationplayground.com/crm</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-05-15T12:45:26.493915" elapsed="11.296213"/>
+<status status="PASS" start="2025-05-20T11:49:38.336441" elapsed="10.423223"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-05-15T12:45:38.593090" level="INFO">Current page contains text 'Customers Are Priority One!'.</msg>
+<msg time="2025-05-20T11:49:49.422656" level="INFO">Current page contains text 'Customers Are Priority One!'.</msg>
 <arg>Customers Are Priority One!</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-05-15T12:45:37.791656" elapsed="0.801665"/>
+<status status="PASS" start="2025-05-20T11:49:48.761976" elapsed="0.661265"/>
 </kw>
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-05-15T12:45:38.596560" level="INFO">Clicking link 'SignIn'.</msg>
+<msg time="2025-05-20T11:49:49.425948" level="INFO">Clicking link 'SignIn'.</msg>
 <arg>SignIn</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-15T12:45:38.593618" elapsed="2.150494"/>
+<status status="PASS" start="2025-05-20T11:49:49.424114" elapsed="2.661608"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-05-15T12:45:41.247985" level="INFO">Current page contains text 'Login'.</msg>
+<msg time="2025-05-20T11:49:52.525609" level="INFO">Current page contains text 'Login'.</msg>
 <arg>Login</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-05-15T12:45:40.744471" elapsed="0.503997"/>
+<status status="PASS" start="2025-05-20T11:49:52.086280" elapsed="0.439848"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-15T12:45:41.250226" level="INFO">Typing text 'admin@robotframeworktutorial.com' into text field 'id=email-id'.</msg>
+<msg time="2025-05-20T11:49:52.528016" level="INFO">Typing text 'admin@robotframeworktutorial.com' into text field 'id=email-id'.</msg>
 <arg>id=email-id</arg>
 <arg>admin@robotframeworktutorial.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-15T12:45:41.249299" elapsed="1.308706"/>
+<status status="PASS" start="2025-05-20T11:49:52.527080" elapsed="1.314604"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-15T12:45:42.559078" level="INFO">Typing text 'qwe' into text field 'id=password'.</msg>
+<msg time="2025-05-20T11:49:53.842697" level="INFO">Typing text 'qwe' into text field 'id=password'.</msg>
 <arg>id=password</arg>
 <arg>qwe</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-15T12:45:42.558609" elapsed="2.092216"/>
+<status status="PASS" start="2025-05-20T11:49:53.842248" elapsed="1.030541"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-05-15T12:45:44.651714" level="INFO">Clicking button 'Submit'.</msg>
+<msg time="2025-05-20T11:49:54.874464" level="INFO">Clicking button 'Submit'.</msg>
 <arg>Submit</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-15T12:45:44.651354" elapsed="1.239336"/>
+<status status="PASS" start="2025-05-20T11:49:54.873807" elapsed="1.525823"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-05-15T12:45:47.626695" level="INFO">Current page contains text 'Our Happy Customers'.</msg>
+<msg time="2025-05-20T11:49:57.667249" level="INFO">Current page contains text 'Our Happy Customers'.</msg>
 <arg>Our Happy Customers</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-05-15T12:45:45.890938" elapsed="1.736315"/>
+<status status="PASS" start="2025-05-20T11:49:56.399883" elapsed="1.268021"/>
 </kw>
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-05-15T12:45:47.628753" level="INFO">Clicking link 'id=new-customer'.</msg>
+<msg time="2025-05-20T11:49:57.669503" level="INFO">Clicking link 'id=new-customer'.</msg>
 <arg>id=new-customer</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-15T12:45:47.628115" elapsed="2.595591"/>
+<status status="PASS" start="2025-05-20T11:49:57.668667" elapsed="3.401561"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-05-15T12:45:50.732113" level="INFO">Current page contains text 'Add Customer'.</msg>
+<msg time="2025-05-20T11:50:01.510440" level="INFO">Current page contains text 'Add Customer'.</msg>
 <arg>Add Customer</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-05-15T12:45:50.224050" elapsed="0.508556"/>
+<status status="PASS" start="2025-05-20T11:50:01.071101" elapsed="0.440001"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-15T12:45:50.734086" level="INFO">Typing text 'janedoe@gmail.com' into text field 'id=EmailAddress'.</msg>
+<msg time="2025-05-20T11:50:01.513185" level="INFO">Typing text 'janedoe@gmail.com' into text field 'id=EmailAddress'.</msg>
 <arg>id=EmailAddress</arg>
 <arg>janedoe@gmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-15T12:45:50.733465" elapsed="0.863348"/>
+<status status="PASS" start="2025-05-20T11:50:01.512163" elapsed="0.848168"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-15T12:45:51.597785" level="INFO">Typing text 'Jane' into text field 'id=FirstName'.</msg>
+<msg time="2025-05-20T11:50:02.361180" level="INFO">Typing text 'Jane' into text field 'id=FirstName'.</msg>
 <arg>id=FirstName</arg>
 <arg>Jane</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-15T12:45:51.597346" elapsed="2.390709"/>
+<status status="PASS" start="2025-05-20T11:50:02.360802" elapsed="0.782457"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-15T12:45:53.992048" level="INFO">Typing text 'Doe' into text field 'id=LastName'.</msg>
+<msg time="2025-05-20T11:50:03.144491" level="INFO">Typing text 'Doe' into text field 'id=LastName'.</msg>
 <arg>id=LastName</arg>
 <arg>Doe</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-15T12:45:53.989309" elapsed="0.900094"/>
+<status status="PASS" start="2025-05-20T11:50:03.143954" elapsed="0.709587"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-15T12:45:54.889816" level="INFO">Typing text 'Dallas' into text field 'id=City'.</msg>
+<msg time="2025-05-20T11:50:03.854051" level="INFO">Typing text 'Dallas' into text field 'id=City'.</msg>
 <arg>id=City</arg>
 <arg>Dallas</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-15T12:45:54.889637" elapsed="0.683029"/>
+<status status="PASS" start="2025-05-20T11:50:03.853829" elapsed="0.719225"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2025-05-15T12:45:55.573928" level="INFO">Selecting options from selection list 'id=StateOrRegion' by value TX.</msg>
+<msg time="2025-05-20T11:50:04.574246" level="INFO">Selecting options from selection list 'id=StateOrRegion' by value TX.</msg>
 <arg>id=StateOrRegion</arg>
 <arg>TX</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2025-05-15T12:45:55.573366" elapsed="2.102184"/>
+<status status="PASS" start="2025-05-20T11:50:04.573690" elapsed="2.119616"/>
 </kw>
 <kw name="Select Radio Button" owner="SeleniumLibrary">
-<msg time="2025-05-15T12:45:57.676787" level="INFO">Selecting 'female' from radio button 'gender'.</msg>
+<msg time="2025-05-20T11:50:06.693727" level="INFO">Selecting 'female' from radio button 'gender'.</msg>
 <arg>gender</arg>
 <arg>female</arg>
 <doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<status status="PASS" start="2025-05-15T12:45:57.676229" elapsed="0.972161"/>
+<status status="PASS" start="2025-05-20T11:50:06.693558" elapsed="1.061272"/>
 </kw>
 <kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2025-05-15T12:45:58.649367" level="INFO">Selecting checkbox 'name=promos-name'.</msg>
+<msg time="2025-05-20T11:50:07.755252" level="INFO">Selecting checkbox 'name=promos-name'.</msg>
 <arg>name=promos-name</arg>
 <doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-15T12:45:58.648937" elapsed="1.226885"/>
+<status status="PASS" start="2025-05-20T11:50:07.755073" elapsed="1.229026"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-05-15T12:45:59.877936" level="INFO">Clicking button 'Submit'.</msg>
+<msg time="2025-05-20T11:50:08.986499" level="INFO">Clicking button 'Submit'.</msg>
 <arg>Submit</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-15T12:45:59.876895" elapsed="1.282640"/>
+<status status="PASS" start="2025-05-20T11:50:08.985487" elapsed="1.991033"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Success! New customer added.</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-05-15T12:46:01.159809" elapsed="1.300204"/>
+<status status="PASS" start="2025-05-20T11:50:10.977618" elapsed="0.301627"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-15T12:46:05.462677" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-05-20T11:50:14.283962" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-15T12:46:02.460690" elapsed="3.002164"/>
+<status status="PASS" start="2025-05-20T11:50:11.280622" elapsed="3.003965"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-05-15T12:46:05.463178" elapsed="0.387586"/>
+<status status="PASS" start="2025-05-20T11:50:14.285500" elapsed="0.344918"/>
 </kw>
 <doc>This is some basic info about test</doc>
 <tag>1006</tag>
 <tag>Contacts</tag>
 <tag>smoke</tag>
-<status status="PASS" start="2025-05-15T12:45:26.491468" elapsed="39.359611"/>
+<status status="PASS" start="2025-05-20T11:49:38.334140" elapsed="36.296546"/>
 </test>
 <doc>This is some basic info about whole suite</doc>
-<status status="PASS" start="2025-05-15T12:45:26.333139" elapsed="39.518560"/>
+<status status="PASS" start="2025-05-20T11:49:38.192957" elapsed="36.438249"/>
 </suite>
 <statistics>
 <total>
@@ -170,10 +170,10 @@
 <stat pass="1" fail="0" skip="0">smoke</stat>
 </tag>
 <suite>
-<stat name="Crm" id="s1" pass="1" fail="0" skip="0">Crm</stat>
+<stat name="CRM tests" id="s1" pass="1" fail="0" skip="0">CRM tests</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-05-15T12:45:26.970903" level="WARN">The chromedriver version (135.0.7049.42) detected in PATH at /Users/annalangner/Documents/workspace/selenium/chromedriver might not be compatible with the detected chrome version (136.0.7103.93); currently, chromedriver 136.0.7103.94 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-05-20T11:49:38.799736" level="WARN">The chromedriver version (135.0.7049.42) detected in PATH at /Users/annalangner/Documents/workspace/selenium/chromedriver might not be compatible with the detected chrome version (136.0.7103.114); currently, chromedriver 136.0.7103.94 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>

@@ -14,3 +14,17 @@
 - Help you discover how Robot Framework's variables & page objects can make your test automation scripts more flexible
 
 - Walk you through the basics of testing web (Selenium), API, database, XML, and files tests
+
+
+### run script:
+- When you want to run test from file
+
+`robot -d results tests/name_the_test_file`
+
+- When you want to run all folder with multiple tests
+
+`robot -d results -N "New name of tests suite" tests`
+
+- When you want to run one test from folder
+
+`robot -d results -t "Name od test case" tests`
