@@ -1,59 +1,33 @@
 *** Settings ***
-Documentation    This is some basic info about the whole suite
-Library    SeleniumLibrary
+Documentation  This is some basic info about the whole suite
 
-*** Variables ***
+Resource            ../Resources/Common.robot
+Resource            ../Resources/AmazonApp.robot
+Test Setup          Begin Web Test
+Test Teardown       End Web Test
+
+# Copy/paste the below line to Terminal window to execute
+# robot -d results tests/amazon.robot
 
 *** Test Cases ***
-User can serch for product
-    [Documentation]             This is som basic info about the test
-    [Tags]                      Smoke
-    OPEN BROWSER                http:/www.amazon.com     chrome
-    wait until page contains    Your Amazon.com
-    input text                  id=twotabsearchtextbox    Ferrari 458
-    click button                id=nav-search-submit-button
-    wait until page contains    results for "Ferrari 458"
-    close browser
+Logged out user can search for products
+    [Tags]  Smoke
+    AmazonApp.Search for Products
 
-User can view a product
-    [Documentation]             This is som basic info about the test
-    [Tags]                      Smoke
-    OPEN BROWSER                http:/www.amazon.com     chrome
-    wait until page contains    Your Amazon.com
-    input text                  id=twotabsearchtextbox    Ferrari 458
-    click button                id=nav-search-submit-button
-    wait until page contains    results for "Ferrari 458"
-    close browser
+Logged out user can view a product
+    [Tags]  Smoke
+    AmazonApp.Search for Products
+    AmazonApp.Select Product from Search Results
 
-User can add product to cart
-    [Documentation]             This is som basic info about the test
-    [Tags]                      Smoke
-    OPEN BROWSER                http:/www.amazon.com     chrome
-    wait until page contains    Your Amazon.com
-    input text                  id=twotabsearchtextbox    Ferrari 458
-    click button                id=nav-search-submit-button
-    wait until page contains    results for "Ferrari 458"
-    click link                  css=#result_0 a.s-acces-detail-page
-    wait until page contains    Back to search results
-    click button                id=add-to-cart-button
-    wait until page contains    1 item added to Cart
-    close browser
+Logged out user can add product to cart
+    [Tags]  Smoke
+    AmazonApp.Search for Products
+    AmazonApp.Select Product from Search Results
+    AmazonApp.Add Product to Cart
 
-User must sign in to check out
-    [Documentation]             This is som basic info about the test
-    [Tags]                      Smoke
-    OPEN BROWSER                http:/www.amazon.com     chrome
-    wait until page contains    Your Amazon.com
-    input text                  id=twotabsearchtextbox    Ferrari 458
-    click button                id=nav-search-submit-button
-    wait until page contains    results for "Ferrari 458"
-    click link                  css=#result_0 a.s-acces-detail-page
-    wait until page contains    Back to search results
-    click button                id=add-to-cart-button
-    wait until page contains    1 item added to Cart
-    click link                  Proceed to Checkout
-    page should contain element    ap_signin1a_pagelet_title
-    element text should be         ap_signin1a_pagelet_title Sign In
-    close browser
-
-*** Keywords ***
+Logged out user must sign in to check out
+    [Tags]  Smoke
+    AmazonApp.Search for Products
+    AmazonApp.Select Product from Search Results
+    AmazonApp.Add Product to Cart
+    AmazonApp.Begin Checkout

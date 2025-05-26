@@ -1,179 +1,242 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.3 on darwin)" generated="2025-05-20T11:49:38.191645" rpa="false" schemaversion="5">
-<suite id="s1" name="CRM tests" source="/Users/annalangner/Documents/workspace/robot/Tests/Crm.robot">
-<test id="s1-t1" name="Should be able to add new customer" line="12">
-<kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>.2s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-05-20T11:49:38.335106" elapsed="0.000238"/>
-</kw>
-<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>10s</arg>
-<doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2025-05-20T11:49:38.335871" elapsed="0.000183"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-05-20T11:49:38.336277" level="INFO">Starting the test case</msg>
-<arg>Starting the test case</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-05-20T11:49:38.336183" elapsed="0.000139"/>
-</kw>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on darwin)" generated="2025-05-23T14:33:56.917549" rpa="false" schemaversion="5">
+<suite id="s1" name="Amazon" source="/Users/annalangner/Documents/workspace/robot/tests/amazon.robot">
+<test id="s1-t1" name="Logged out user can search for products" line="13">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-05-20T11:49:38.336559" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/crm'.</msg>
-<msg time="2025-05-20T11:49:38.799736" level="WARN">The chromedriver version (135.0.7049.42) detected in PATH at /Users/annalangner/Documents/workspace/selenium/chromedriver might not be compatible with the detected chrome version (136.0.7103.114); currently, chromedriver 136.0.7103.94 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
-<arg>https://automationplayground.com/crm</arg>
+<msg time="2025-05-23T14:33:57.065962" level="INFO">Opening browser 'chrome' to base url 'about: blank'.</msg>
+<msg time="2025-05-23T14:33:57.530776" level="WARN">The chromedriver version (135.0.7049.42) detected in PATH at /Users/annalangner/Documents/workspace/selenium/chromedriver might not be compatible with the detected chrome version (136.0.7103.114); currently, chromedriver 136.0.7103.113 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>about: blank</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-05-20T11:49:38.336441" elapsed="10.423223"/>
+<status status="PASS" start="2025-05-23T14:33:57.065797" elapsed="6.407056"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-05-20T11:49:49.422656" level="INFO">Current page contains text 'Customers Are Priority One!'.</msg>
-<arg>Customers Are Priority One!</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-05-20T11:49:48.761976" elapsed="0.661265"/>
+<status status="PASS" start="2025-05-23T14:33:57.065168" elapsed="6.408965"/>
 </kw>
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-05-20T11:49:49.425948" level="INFO">Clicking link 'SignIn'.</msg>
-<arg>SignIn</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-20T11:49:49.424114" elapsed="2.661608"/>
+<kw name="Search for Products" owner="AmazonApp">
+<kw name="Load" owner="LandingPage">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-23T14:34:03.475759" level="INFO">Opening url 'http:/www.amazon.com'</msg>
+<arg>http:/www.amazon.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-23T14:34:03.475601" elapsed="1.769396"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-05-20T11:49:52.525609" level="INFO">Current page contains text 'Login'.</msg>
-<arg>Login</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-05-20T11:49:52.086280" elapsed="0.439848"/>
+<status status="PASS" start="2025-05-23T14:34:03.475271" elapsed="1.769844"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-20T11:49:52.528016" level="INFO">Typing text 'admin@robotframeworktutorial.com' into text field 'id=email-id'.</msg>
-<arg>id=email-id</arg>
-<arg>admin@robotframeworktutorial.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-20T11:49:52.527080" elapsed="1.314604"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-20T11:49:53.842697" level="INFO">Typing text 'qwe' into text field 'id=password'.</msg>
-<arg>id=password</arg>
-<arg>qwe</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-20T11:49:53.842248" elapsed="1.030541"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-05-20T11:49:54.874464" level="INFO">Clicking button 'Submit'.</msg>
-<arg>Submit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-20T11:49:54.873807" elapsed="1.525823"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-05-20T11:49:57.667249" level="INFO">Current page contains text 'Our Happy Customers'.</msg>
-<arg>Our Happy Customers</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-05-20T11:49:56.399883" elapsed="1.268021"/>
-</kw>
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-05-20T11:49:57.669503" level="INFO">Clicking link 'id=new-customer'.</msg>
-<arg>id=new-customer</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-20T11:49:57.668667" elapsed="3.401561"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-05-20T11:50:01.510440" level="INFO">Current page contains text 'Add Customer'.</msg>
-<arg>Add Customer</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-05-20T11:50:01.071101" elapsed="0.440001"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-20T11:50:01.513185" level="INFO">Typing text 'janedoe@gmail.com' into text field 'id=EmailAddress'.</msg>
-<arg>id=EmailAddress</arg>
-<arg>janedoe@gmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-20T11:50:01.512163" elapsed="0.848168"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-20T11:50:02.361180" level="INFO">Typing text 'Jane' into text field 'id=FirstName'.</msg>
-<arg>id=FirstName</arg>
-<arg>Jane</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-20T11:50:02.360802" elapsed="0.782457"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-20T11:50:03.144491" level="INFO">Typing text 'Doe' into text field 'id=LastName'.</msg>
-<arg>id=LastName</arg>
-<arg>Doe</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-20T11:50:03.143954" elapsed="0.709587"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-20T11:50:03.854051" level="INFO">Typing text 'Dallas' into text field 'id=City'.</msg>
-<arg>id=City</arg>
-<arg>Dallas</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-20T11:50:03.853829" elapsed="0.719225"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2025-05-20T11:50:04.574246" level="INFO">Selecting options from selection list 'id=StateOrRegion' by value TX.</msg>
-<arg>id=StateOrRegion</arg>
-<arg>TX</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2025-05-20T11:50:04.573690" elapsed="2.119616"/>
-</kw>
-<kw name="Select Radio Button" owner="SeleniumLibrary">
-<msg time="2025-05-20T11:50:06.693727" level="INFO">Selecting 'female' from radio button 'gender'.</msg>
-<arg>gender</arg>
-<arg>female</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<status status="PASS" start="2025-05-20T11:50:06.693558" elapsed="1.061272"/>
-</kw>
-<kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2025-05-20T11:50:07.755252" level="INFO">Selecting checkbox 'name=promos-name'.</msg>
-<arg>name=promos-name</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-20T11:50:07.755073" elapsed="1.229026"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-05-20T11:50:08.986499" level="INFO">Clicking button 'Submit'.</msg>
-<arg>Submit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-20T11:50:08.985487" elapsed="1.991033"/>
-</kw>
+<kw name="Verify Page Loaded" owner="LandingPage">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Success! New customer added.</arg>
+<msg time="2025-05-23T14:34:10.599533" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-23T14:34:10.599740" level="FAIL">Text 'Your Amazon.com' did not appear in 5 seconds.</msg>
+<arg>Your Amazon.com</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-05-20T11:50:10.977618" elapsed="0.301627"/>
+<status status="FAIL" start="2025-05-23T14:34:05.245512" elapsed="5.358785">Text 'Your Amazon.com' did not appear in 5 seconds.</status>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-20T11:50:14.283962" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-20T11:50:11.280622" elapsed="3.003965"/>
+<status status="FAIL" start="2025-05-23T14:34:05.245287" elapsed="5.359166">Text 'Your Amazon.com' did not appear in 5 seconds.</status>
 </kw>
+<kw name="TopNav.Search for Products">
+<status status="NOT RUN" start="2025-05-23T14:34:10.604684" elapsed="0.000031"/>
+</kw>
+<kw name="Verify Search Completed" owner="SearchResults">
+<status status="NOT RUN" start="2025-05-23T14:34:10.604858" elapsed="0.000025"/>
+</kw>
+<status status="FAIL" start="2025-05-23T14:34:03.474818" elapsed="7.130140">Text 'Your Amazon.com' did not appear in 5 seconds.</status>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-05-20T11:50:14.285500" elapsed="0.344918"/>
+<status status="PASS" start="2025-05-23T14:34:10.605438" elapsed="0.119862"/>
 </kw>
-<doc>This is some basic info about test</doc>
-<tag>1006</tag>
-<tag>Contacts</tag>
-<tag>smoke</tag>
-<status status="PASS" start="2025-05-20T11:49:38.334140" elapsed="36.296546"/>
+<status status="PASS" start="2025-05-23T14:34:10.605212" elapsed="0.120218"/>
+</kw>
+<tag>Smoke</tag>
+<status status="FAIL" start="2025-05-23T14:33:57.064494" elapsed="13.661063">Text 'Your Amazon.com' did not appear in 5 seconds.</status>
 </test>
-<doc>This is some basic info about whole suite</doc>
-<status status="PASS" start="2025-05-20T11:49:38.192957" elapsed="36.438249"/>
+<test id="s1-t2" name="Logged out user can view a product" line="17">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-23T14:34:10.726772" level="INFO">Opening browser 'chrome' to base url 'about: blank'.</msg>
+<msg time="2025-05-23T14:34:11.139343" level="WARN">The chromedriver version (135.0.7049.42) detected in PATH at /Users/annalangner/Documents/workspace/selenium/chromedriver might not be compatible with the detected chrome version (136.0.7103.114); currently, chromedriver 136.0.7103.113 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>about: blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-23T14:34:10.726529" elapsed="5.290841"/>
+</kw>
+<status status="PASS" start="2025-05-23T14:34:10.726270" elapsed="5.291425"/>
+</kw>
+<kw name="Search for Products" owner="AmazonApp">
+<kw name="Load" owner="LandingPage">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-23T14:34:16.019220" level="INFO">Opening url 'http:/www.amazon.com'</msg>
+<arg>http:/www.amazon.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-23T14:34:16.019067" elapsed="1.773297"/>
+</kw>
+<status status="PASS" start="2025-05-23T14:34:16.018786" elapsed="1.773697"/>
+</kw>
+<kw name="Verify Page Loaded" owner="LandingPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-05-23T14:34:23.170932" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-23T14:34:23.171284" level="FAIL">Text 'Your Amazon.com' did not appear in 5 seconds.</msg>
+<arg>Your Amazon.com</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-05-23T14:34:17.793232" elapsed="5.379124">Text 'Your Amazon.com' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2025-05-23T14:34:17.792669" elapsed="5.379891">Text 'Your Amazon.com' did not appear in 5 seconds.</status>
+</kw>
+<kw name="TopNav.Search for Products">
+<status status="NOT RUN" start="2025-05-23T14:34:23.172839" elapsed="0.000036"/>
+</kw>
+<kw name="Verify Search Completed" owner="SearchResults">
+<status status="NOT RUN" start="2025-05-23T14:34:23.173010" elapsed="0.000026"/>
+</kw>
+<status status="FAIL" start="2025-05-23T14:34:16.018280" elapsed="7.154821">Text 'Your Amazon.com' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Select Product from Search Results" owner="AmazonApp">
+<status status="NOT RUN" start="2025-05-23T14:34:23.173288" elapsed="0.000026"/>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-23T14:34:23.173796" elapsed="0.110318"/>
+</kw>
+<status status="PASS" start="2025-05-23T14:34:23.173542" elapsed="0.110726"/>
+</kw>
+<tag>Smoke</tag>
+<status status="FAIL" start="2025-05-23T14:34:10.725887" elapsed="12.558477">Text 'Your Amazon.com' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t3" name="Logged out user can add product to cart" line="22">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-23T14:34:23.285969" level="INFO">Opening browser 'chrome' to base url 'about: blank'.</msg>
+<msg time="2025-05-23T14:34:23.720549" level="WARN">The chromedriver version (135.0.7049.42) detected in PATH at /Users/annalangner/Documents/workspace/selenium/chromedriver might not be compatible with the detected chrome version (136.0.7103.114); currently, chromedriver 136.0.7103.113 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>about: blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-23T14:34:23.285763" elapsed="5.246673"/>
+</kw>
+<status status="PASS" start="2025-05-23T14:34:23.285436" elapsed="5.247345"/>
+</kw>
+<kw name="Search for Products" owner="AmazonApp">
+<kw name="Load" owner="LandingPage">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-23T14:34:28.534399" level="INFO">Opening url 'http:/www.amazon.com'</msg>
+<arg>http:/www.amazon.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-23T14:34:28.534261" elapsed="6.734214"/>
+</kw>
+<status status="PASS" start="2025-05-23T14:34:28.533990" elapsed="6.734703"/>
+</kw>
+<kw name="Verify Page Loaded" owner="LandingPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-05-23T14:34:44.142731" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-23T14:34:44.142977" level="FAIL">Text 'Your Amazon.com' did not appear in 5 seconds.</msg>
+<arg>Your Amazon.com</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-05-23T14:34:35.269296" elapsed="8.874841">Text 'Your Amazon.com' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2025-05-23T14:34:35.268889" elapsed="8.875406">Text 'Your Amazon.com' did not appear in 5 seconds.</status>
+</kw>
+<kw name="TopNav.Search for Products">
+<status status="NOT RUN" start="2025-05-23T14:34:44.144510" elapsed="0.000037"/>
+</kw>
+<kw name="Verify Search Completed" owner="SearchResults">
+<status status="NOT RUN" start="2025-05-23T14:34:44.144677" elapsed="0.000025"/>
+</kw>
+<status status="FAIL" start="2025-05-23T14:34:28.533560" elapsed="15.611210">Text 'Your Amazon.com' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Select Product from Search Results" owner="AmazonApp">
+<status status="NOT RUN" start="2025-05-23T14:34:44.144934" elapsed="0.000026"/>
+</kw>
+<kw name="Add Product to Cart" owner="AmazonApp">
+<status status="NOT RUN" start="2025-05-23T14:34:44.145085" elapsed="0.000023"/>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-23T14:34:44.145575" elapsed="0.143012"/>
+</kw>
+<status status="PASS" start="2025-05-23T14:34:44.145328" elapsed="0.143443"/>
+</kw>
+<tag>Smoke</tag>
+<status status="FAIL" start="2025-05-23T14:34:23.284733" elapsed="21.004175">Text 'Your Amazon.com' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t4" name="Logged out user must sign in to check out" line="28">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-23T14:34:44.290208" level="INFO">Opening browser 'chrome' to base url 'about: blank'.</msg>
+<msg time="2025-05-23T14:34:44.727150" level="WARN">The chromedriver version (135.0.7049.42) detected in PATH at /Users/annalangner/Documents/workspace/selenium/chromedriver might not be compatible with the detected chrome version (136.0.7103.114); currently, chromedriver 136.0.7103.113 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>about: blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-23T14:34:44.289985" elapsed="5.265320"/>
+</kw>
+<status status="PASS" start="2025-05-23T14:34:44.289732" elapsed="5.266093"/>
+</kw>
+<kw name="Search for Products" owner="AmazonApp">
+<kw name="Load" owner="LandingPage">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-23T14:34:49.558064" level="INFO">Opening url 'http:/www.amazon.com'</msg>
+<arg>http:/www.amazon.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-23T14:34:49.557905" elapsed="2.407960"/>
+</kw>
+<status status="PASS" start="2025-05-23T14:34:49.557641" elapsed="2.408485"/>
+</kw>
+<kw name="Verify Page Loaded" owner="LandingPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-05-23T14:34:57.536861" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-23T14:34:57.537611" level="FAIL">Text 'Your Amazon.com' did not appear in 5 seconds.</msg>
+<arg>Your Amazon.com</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-05-23T14:34:51.966575" elapsed="5.572339">Text 'Your Amazon.com' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2025-05-23T14:34:51.966325" elapsed="5.573031">Text 'Your Amazon.com' did not appear in 5 seconds.</status>
+</kw>
+<kw name="TopNav.Search for Products">
+<status status="NOT RUN" start="2025-05-23T14:34:57.539916" elapsed="0.000067"/>
+</kw>
+<kw name="Verify Search Completed" owner="SearchResults">
+<status status="NOT RUN" start="2025-05-23T14:34:57.540207" elapsed="0.000034"/>
+</kw>
+<status status="FAIL" start="2025-05-23T14:34:49.557112" elapsed="7.983197">Text 'Your Amazon.com' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Select Product from Search Results" owner="AmazonApp">
+<status status="NOT RUN" start="2025-05-23T14:34:57.540563" elapsed="0.000026"/>
+</kw>
+<kw name="Add Product to Cart" owner="AmazonApp">
+<status status="NOT RUN" start="2025-05-23T14:34:57.540713" elapsed="0.001032"/>
+</kw>
+<kw name="Begin Checkout" owner="AmazonApp">
+<status status="NOT RUN" start="2025-05-23T14:34:57.541886" elapsed="0.000025"/>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-23T14:34:57.542497" elapsed="0.092892"/>
+</kw>
+<status status="PASS" start="2025-05-23T14:34:57.542155" elapsed="0.093376"/>
+</kw>
+<tag>Smoke</tag>
+<status status="FAIL" start="2025-05-23T14:34:44.289327" elapsed="13.346298">Text 'Your Amazon.com' did not appear in 5 seconds.</status>
+</test>
+<doc>This is some basic info about the whole suite</doc>
+<status status="FAIL" start="2025-05-23T14:33:56.918874" elapsed="60.717973"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">1006</stat>
-<stat pass="1" fail="0" skip="0">Contacts</stat>
-<stat pass="1" fail="0" skip="0">smoke</stat>
+<stat pass="0" fail="4" skip="0">Smoke</stat>
 </tag>
 <suite>
-<stat name="CRM tests" id="s1" pass="1" fail="0" skip="0">CRM tests</stat>
+<stat name="Amazon" id="s1" pass="0" fail="4" skip="0">Amazon</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-05-20T11:49:38.799736" level="WARN">The chromedriver version (135.0.7049.42) detected in PATH at /Users/annalangner/Documents/workspace/selenium/chromedriver might not be compatible with the detected chrome version (136.0.7103.114); currently, chromedriver 136.0.7103.94 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-05-23T14:33:57.530776" level="WARN">The chromedriver version (135.0.7049.42) detected in PATH at /Users/annalangner/Documents/workspace/selenium/chromedriver might not be compatible with the detected chrome version (136.0.7103.114); currently, chromedriver 136.0.7103.113 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-05-23T14:34:11.139343" level="WARN">The chromedriver version (135.0.7049.42) detected in PATH at /Users/annalangner/Documents/workspace/selenium/chromedriver might not be compatible with the detected chrome version (136.0.7103.114); currently, chromedriver 136.0.7103.113 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-05-23T14:34:23.720549" level="WARN">The chromedriver version (135.0.7049.42) detected in PATH at /Users/annalangner/Documents/workspace/selenium/chromedriver might not be compatible with the detected chrome version (136.0.7103.114); currently, chromedriver 136.0.7103.113 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-05-23T14:34:44.727150" level="WARN">The chromedriver version (135.0.7049.42) detected in PATH at /Users/annalangner/Documents/workspace/selenium/chromedriver might not be compatible with the detected chrome version (136.0.7103.114); currently, chromedriver 136.0.7103.113 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
