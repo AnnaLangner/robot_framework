@@ -9,6 +9,11 @@ Test Teardown       End Web Test
 # Copy/paste the below line to Terminal window to execute
 # robot -d results tests/amazon.robot
 
+*** Variables ***
+${BROWSER} =    chrome
+${START_URL} =    http:/www.amazon.com
+${SEARCH_TERM} =    Ferrari 458
+
 *** Test Cases ***
 Logged out user can search for products
     [Tags]  Smoke
