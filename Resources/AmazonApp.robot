@@ -8,6 +8,15 @@ Resource    ../Resources/PO/SignIn.robot
 
 *** Keywords ***
 
+Login
+    [Arguments]    ${Username}    ${Password}
+    SignIn.Login With Valid Credentials    ${Username}    ${Password}
+
+Login with Invalid Credentials
+    SignIn.Fill "Email" Field    admin@robotframework.com
+    SignIn.Fill "Password" Fiels    wrongPassword
+    SignIn.Click "Sign In" Button
+
 Search for Products
     LandingPage.Load
     LandingPage.Verify Page Loaded

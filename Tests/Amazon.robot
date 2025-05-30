@@ -10,11 +10,16 @@ Test Teardown       End Web Test
 # robot -d results tests/amazon.robot
 
 *** Variables ***
-${BROWSER} =    chrome
-${START_URL} =    http:/www.amazon.com
-${SEARCH_TERM} =    Ferrari 458
+${BROWSER} =            chrome
+${START_URL} =          http:/www.amazon.com
+${SEARCH_TERM} =        Ferrari 458
+${LOGIN_EMAIL} =        user@gmail.com
+${LOGIN_PASSWORD} =     myPassword1
 
 *** Test Cases ***
+Should be able to login
+    AmazonApp.Login     ${LOGIN_EMAIL} ${LOGIN_PASSWORD}
+
 Logged out user can search for products
     [Tags]  Smoke
     AmazonApp.Search for Products
